@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* ---------------------------------------------------- */
+/* 🔥 Animated Background Gradient */
+/* ---------------------------------------------------- */
+.animated-bg {
+  background: linear-gradient(-45deg, #8ec5fc, #e0c3fc, #a1c4fd, #c2e9fb);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ---------------------------------------------------- */
+/* 🔥 Floating Coding Symbols */
+/* ---------------------------------------------------- */
+/* More visible floating symbols */
+.floating-symbol {
+  position: absolute;
+  font-size: 60px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.35);     /* Increased visibility */
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.4); /* Glow for contrast */
+  animation: floatUp 10s linear infinite;
+  user-select: none;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) translateX(0);
+    opacity: 0;
+  }
+  20% { opacity: 0.4; }
+  100% {
+    transform: translateY(-120vh) translateX(40px);
+    opacity: 0;
+  }
+}
+
+/* Random positions for multiple symbols */
+.symbol-1 { left: 10%; animation-delay: 0s; }
+.symbol-2 { left: 25%; animation-delay: 2s; }
+.symbol-3 { left: 40%; animation-delay: 4s; }
+.symbol-4 { left: 55%; animation-delay: 1s; }
+.symbol-5 { left: 70%; animation-delay: 3s; }
+.symbol-6 { left: 85%; animation-delay: 5s; }
+/* Background Gradient + Orbs */
+.dashboard-bg {
+  background: linear-gradient(135deg, #0f172a, #1e293b, #0a0f24);
+  background-size: 400% 400%;
+  animation: gradientFlow 14s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glowing Orbs */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.5;
+}
+
+.orb1 {
+  width: 350px;
+  height: 350px;
+  background: #6366f1;
+  top: -80px;
+  left: -80px;
+}
+
+.orb2 {
+  width: 400px;
+  height: 400px;
+  background: #06b6d4;
+  bottom: -120px;
+  right: -80px;
+}
+
+.orb3 {
+  width: 300px;
+  height: 300px;
+  background: #ef4444;
+  top: 40%;
+  left: 60%;
+}
+
+/* Neon Cards */
+.neon-card {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(15px);
+  transition: 0.3s;
+}
+.neon-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.15);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.card-value {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+/* Recent task card */
+.recent-task-card {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  transition: 0.3s;
+}
+.recent-task-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+}
